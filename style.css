@@ -1,5 +1,6 @@
 body {
     padding: 10px 40px;
+    font-family: "Open Sans", Arial, sans-serif;
 }
 
 .loader {
@@ -9,7 +10,7 @@ body {
     animation: spin 2s linear infinite;
 }
 
-.error {
+.error, .jserror {
     color: red;
 }
 
@@ -38,7 +39,6 @@ body {
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5;
-    font-family: "Helvetica Neue", Arial, sans-serif;
     cursor: pointer;
     -webkit-appearance: none;
     -webkit-font-smoothing: antialiased;
@@ -64,4 +64,14 @@ body {
     95% {
         padding: 0.75rem 1.7rem;
     }
+}
+
+#root.selected, #root .selected {
+    border: 2px solid red;
+}
+
+#app, #root, #root div, #root li, #root ol, #root ul, #root li {
+    border: 1px solid black;
+    padding: 1px 10px;
+    margin: 1px;
 }
