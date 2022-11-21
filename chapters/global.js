@@ -2,7 +2,11 @@ const runCatching = (f) => {
     try {
         f()
     } catch (e) {
-        document.getElementsByClassName("jserror")[0].textContent = e.message + "\n\n" + e.stack
+        if (document.getElementById("exception")) {
+            document.getElementById("exception").textContent = e.message + "\n\n" + e.stack
+        } else {
+            document.getElementsByClassName("jserror")[0].textContent = e.message + "\n\n" + e.stack
+        }
     }
 }
 

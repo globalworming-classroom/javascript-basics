@@ -1,6 +1,6 @@
 setTimeout(() => {
     try {
-        if (!document.getElementById("exception").textContent.startsWith("Error")) {
+        if (!document.getElementById("exception").textContent.includes("Error")) {
             document.getElementsByClassName("error")[0].textContent = "expected error to be thrown"
             return
         }

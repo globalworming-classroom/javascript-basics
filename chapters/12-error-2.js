@@ -1,8 +1,8 @@
 setTimeout(() => {
     try {
         let error = document.getElementById("exception").textContent;
-        if (!error.startsWith("ServerError")) {
-            document.getElementsByClassName("error")[0].textContent = "expected ServerError to be thrown but got " + (error || "nothing")
+        if (!error.includes("ServerError")) {
+            document.getElementsByClassName("error")[0].textContent = "expected ServerError to be thrown"
             return
         }
         document.getElementById("next").hidden = false

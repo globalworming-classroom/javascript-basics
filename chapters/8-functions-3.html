@@ -12,7 +12,7 @@
 </head>
 <body onload="setTimeout(() => showNext(), 2000)">
 <h1>Spread Operator</h1>
-Let's look a bit more at the <i>spread operator</i> because it is so useful: it spreads any iterables, so converting iterables to arrays is super easy
+Let's look a bit more at the <i>spread operator</i> because it is so useful: it spreads any iterables, making each entry a function parameter, so converting iterables to arrays is super easy
 <pre>
 <code class="language-javascript">// create keys and values arrays
 const map = new Map([["thunder", "lightning"],["fire","ice"]]);
@@ -23,7 +23,8 @@ console.log(values)
 
 // list of unique entries by using new Set()
 const entries = ["apple", "banana", "grape", "banana"]
-console.log([...new Set(entries)])
+const uniqEntries = [...new Set(entries)]
+console.log(uniqEntries)
 
 // array of DOM elements
 const errorMessageNodes = [...document.getElementsByClassName("error")]

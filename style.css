@@ -10,7 +10,7 @@ body {
     animation: spin 2s linear infinite;
 }
 
-.error, .jserror {
+.error, .jserror, #exception {
     color: red;
 }
 
