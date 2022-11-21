@@ -27,7 +27,7 @@ setTimeout(() => {
             document.getElementsByClassName("error")[0].textContent = `test failed, expected "thunder" to be member of "NOD"`
             return
         }
-        document.getElementById("displayOnSuccess").hidden = false
+        showNext()
     } catch (e) {
         document.getElementsByClassName("error")[0].textContent = e.message + "\n\n" + e.stack
         throw e
